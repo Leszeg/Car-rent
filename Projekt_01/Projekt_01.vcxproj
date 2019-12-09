@@ -151,16 +151,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Car.cpp" />
+    <ClCompile Include="Car_condition.cpp" />
     <ClCompile Include="Customer.cpp" />
     <ClCompile Include="Order.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Projekt_01.cpp" />
+    <ClCompile Include="Rent.cpp" />
     <ClCompile Include="Worker.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Car.h" />
+    <ClInclude Include="Car_condition.h" />
     <ClInclude Include="Customer.h" />
     <ClInclude Include="Order.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Rent.h" />
     <ClInclude Include="Worker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -8,11 +8,20 @@ Customer::~Customer()
 {
 }
 
-Order Customer::rent()
+Rent Customer::rent(Customer)
 {
-	return Order();
+	return Rent();
 }
 
-void Customer::return_car()
+/*void Customer::return_car(Car)
+{
+}*/
+
+void Customer::accident()
 {
 }
+
+void Customer::logging()
+{
+}
+
