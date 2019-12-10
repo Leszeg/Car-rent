@@ -7,7 +7,7 @@ class Car_condition
 {
 	string date;
 	bool repair;
-
+public:
 	Car_condition();
 	~Car_condition();
 	void control();
