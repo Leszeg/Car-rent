@@ -1,6 +1,10 @@
+#pragma once
 #include "Car_list.h"
+#include "Car.h"
 
-Car_list::Car_list () //:head(nullptr), tail(nullptr)
+
+
+Car_list::Car_list () 
 {
 }
 
@@ -8,14 +12,27 @@ Car_list::~Car_list()
 {
 }
 
-void Car_list::add_car(string plate_number_, string typ_, string model_, int firm_number_, string date_, bool repair_)
+void Car_list::add_car(std::string plate_number_, std::string typ_, std::string model_, int firm_number_, std::string date_, bool repair_)
 {
-	//Car* temp = new Car;
-	//temp->plate_number = 0;
+	Car *nowy = new Car(plate_number_, typ_, model_, firm_number_, date_, repair_);
+	this->vehicles[firm_number_] = nowy;
+	
+	
 }
-
-
 
 void Car_list::remove_car()
 {
+}
+
+void Car_list::load_from_file()
+{
+}
+
+void Car_list::show()
+{
+	int i = 0;
+	for (auto wsk = this->vehicles.begin(); wsk != this->vehicles.end(); ++wsk) {
+		std::cout << i + 1 << "." << wsk->second->model << "\n";
+		i++;
+	}
 }
