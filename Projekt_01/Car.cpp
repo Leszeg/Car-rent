@@ -8,9 +8,7 @@ Car::Car(std::string plate_number_, std::string typ_, std::string model_, int fi
 	firm_number = firm_number_;
 	model = model_;
 	condition.repair = repair_;
-	condition.date = date_;
-	
-	
+	condition.date = date_;	
 }
 
 Car::~Car()

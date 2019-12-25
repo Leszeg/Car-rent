@@ -15,7 +15,7 @@ public:
 	~Car_list();
 	void add_car(std::string plate_number_, std::string typ_, std::string model_, int firm_number_, std::string date_, bool repair_); // nie wiem jak oznaczac te wartosci przyjmowane jako argumenty, daje _ na koncu narazie
 
-	void remove_car();
+	void remove_car(int);
 	void load_from_file();
 	void show();
 	friend class Worker;
