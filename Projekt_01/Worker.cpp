@@ -5,6 +5,8 @@
 #include "Worker_list.h"
 
 
+
+
 Worker::Worker(Worker_list* lista,std::string name_, std::string surname_, std::string pesel_, int age_, int worker_number_, std::string password_)
 {
 	name = name_;
@@ -28,7 +30,6 @@ Worker::~Worker()
 
 void Worker::add_vehicle(Car_list* lista)
 {
-
 	std::string plate_number, typ, model, date;
 	int firm_number;
 	bool repair;

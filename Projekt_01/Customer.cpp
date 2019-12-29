@@ -34,7 +34,7 @@ void Customer::accident()
 {
 }
 
-void Customer::logging()
+/*void Customer::logging()
 {
 }
-
+*/

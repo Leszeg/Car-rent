@@ -4,6 +4,7 @@
 class Car_list;
 class Registration;
 class Worker_list;
+class Login;
 
 class Worker : private Person
 {
@@ -18,4 +19,5 @@ public:
 	void add_vehicle(Car_list*);
 	friend class Registration;
 	friend class Worker_list;
+	friend class Login;
 };

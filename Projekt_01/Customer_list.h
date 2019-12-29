@@ -13,4 +13,5 @@ public:
 	void erase_customerr(int);
 	friend class Customer;
 	friend class Registration;
+	friend class Login;
 };

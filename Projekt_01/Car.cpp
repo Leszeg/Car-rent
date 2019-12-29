@@ -1,6 +1,10 @@
 #pragma once
 #include "Car.h"
 
+Car::Car()
+{
+}
+
 Car::Car(std::string plate_number_, std::string typ_, std::string model_, int firm_number_, std::string date_, bool repair_)
 {
 	plate_number = plate_number_;

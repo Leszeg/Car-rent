@@ -20,9 +20,10 @@ public:
 	Rent rent(Customer);
 	/*void return_car(Car);*/	// niedzia³a ta funkcja
 	void accident();
-	void logging();
+	//void logging();
 	friend class Registration;
 	friend class Customer_list;
+	friend class Login;
 
 };
 

@@ -1,8 +1,10 @@
 #pragma once
 #include <map>
 
+
 class Worker;
 class Worker_list;
+class Login;
 
 class Worker_list
 {
@@ -13,6 +15,6 @@ public:
 	void add_worker(Worker*);
 	void erase_worker(int);
 	friend class Registration;
-	friend class Worker_list;
+	friend class Login;
 
 };
