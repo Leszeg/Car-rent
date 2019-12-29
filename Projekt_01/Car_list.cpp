@@ -21,7 +21,7 @@ void Car_list::add_car(std::string plate_number_, std::string typ_, std::string 
 	
 }
 
-void Car_list::remove_car(int key) // Podaje "firm number" i usuwam dany pojazd z mapy.
+void Car_list::remove_car(int key) // Podaje "firm number" i usuwam dany pojazd z mapy. firm number == key
 {
 	this->vehicles.erase(key);
 }

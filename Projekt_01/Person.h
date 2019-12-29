@@ -6,10 +6,7 @@ using namespace std;
 class Person
 {
 protected:
-	string name, surname;
-	int pesel, age;
-
-	Person();
-	~Person();
+	string name, surname, pesel;
+	int age;
 };
 

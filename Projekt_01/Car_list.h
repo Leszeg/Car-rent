@@ -8,7 +8,7 @@ class Car;
 
 class Car_list
 {
-	std::map<int, Car*> vehicles;
+	std::map<int, Car*> vehicles; //mapa uzywajaca inta jako klucza, przechowuj¹ca wskazniki do obiektow typu Car
 	
 public:
 	Car_list();
