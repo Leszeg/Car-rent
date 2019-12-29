@@ -18,9 +18,9 @@ public:
 	~Customer();
 
 	Rent rent(Customer);
-	/*void return_car(Car);*/	// niedzia³a ta funkcja
+	//void return_car(Car);	// niedzia³a ta funkcja
 	void accident();
-	//void logging();
+	//void logging(); logowanie zrobilem przez klase login
 	friend class Registration;
 	friend class Customer_list;
 	friend class Login;
