@@ -1,19 +1,26 @@
 #pragma once
 #include <string>
-#include "Order.h"
-using namespace std;
+//#include "Order.h"
+//#include "Date.h"
+#include "Customer.h"
+
+
+//class Order;
+class Customer;
+
+
 class Rent
 {
-	string rent_date;
-	string chosen_return_date;
-	string return_date;
-
+	Date rent_date;
+	Date chosen_return_date;
+	Date return_date;
 	Order order;
 public:
-	Rent();
+	Rent(Car_list*);
 	~Rent();
-	void give_car();
-	void collect_car();
-	void return_car();		// po co tutaj s¹ dwie metody do tego samego odbierz i oddaj ??
+	friend void Customer::complain();
+	friend void Customer::rent(Car_list*);
+	friend class Order;
+
 };
 
