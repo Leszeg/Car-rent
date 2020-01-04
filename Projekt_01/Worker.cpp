@@ -30,6 +30,7 @@ void Worker::add_vehicle(Car_list* lista)
 	std::string plate_number, typ, model, date;
 	int firm_number;
 	bool repair;
+	int price;
 
 	cout << "Podaj model: ";
 	cin >> model;
@@ -43,6 +44,8 @@ void Worker::add_vehicle(Car_list* lista)
 	cin >> date;
 	cout << "Czy pojazd wymaga naprawy? (1-Tak,0-Nie)";
 	cin >> repair;
+	cout << "Cena za jeden dzien wypozyczenia?";
+	cin >> price;
 
-	lista->add_car(plate_number, typ, model, firm_number, date, repair);
+	lista->add_car(plate_number, typ, model, firm_number, date, repair,price);
 }

@@ -11,12 +11,12 @@ std::string getPesel()
 	string pesel;
 	while (true)
 	{
-		std::cout << "\nPodaj Pesel: ";
+		std::cout << "\nPodaj PESEL: ";
 		cin >> pesel;
 
 		if (pesel.length() != 11)
 		{
-			std::cout << "zle";
+			std::cout << "Nieprawidlowy nr PESEL";
 		}
 		else break;
 		

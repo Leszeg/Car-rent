@@ -9,6 +9,7 @@
 #include "Registration.h"
 #include "Customer.h"
 #include "Login.h"
+#include "Rent.h"
 
 												 //mapy
 Car_list* cars = new Car_list;					 //samochodow
@@ -41,8 +42,8 @@ void print_customer_menu()
 
 int main()
 {
-	cars->add_car("RSA 21356", "Volkswagen", "Caddy", 12345, "13.15.2019", 0); //testowe pojazdy
-	cars->add_car("RSA 65123", "Opel", "Corsa", 54321, "13.15.2019", 0);
+	cars->add_car("RSA 21356", "Volkswagen", "Caddy", 12345, "13.15.2019", 0,50); //testowe pojazdy
+	cars->add_car("RSA 65123", "Opel", "Corsa", 54321, "13.15.2019", 0,60);
 	//cars->show();
 	Worker Andrzej(workers, "Andrzej", "Kowalski", "98020703971", 21, 123456, "andrzej"); //testowy pracownik
 	//Andrzej.add_vehicle(cars); // dodawanie reczne pojazdu przez Andrzeja
@@ -84,6 +85,20 @@ int main()
 			if (wsk_customer != 0)
 			{
 				std::cout << "\nPoprawnie zalogowany";
+				
+				print_customer_menu();
+				std::cin >> choice;
+				switch (choice)
+				{
+				case 1:
+				{
+					wsk_customer->rent(cars);
+					
+					
+					
+					break;
+				}
+				}
 				break;
 
 			}

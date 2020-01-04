@@ -12,9 +12,9 @@ Car_list::~Car_list()
 {
 }
 
-void Car_list::add_car(std::string plate_number_, std::string typ_, std::string model_, int firm_number_, std::string date_, bool repair_)
+void Car_list::add_car(std::string plate_number_, std::string typ_, std::string model_, int firm_number_, std::string date_, bool repair_,int price_)
 {
-	Car *nowy = new Car(plate_number_, typ_, model_, firm_number_, date_, repair_); // tworzy obiekt dynamiczny Car i przekazuje do konstruktora dane podane przez uzytkownika w metodzie Worker::add_vehicle
+	Car *nowy = new Car(plate_number_, typ_, model_, firm_number_, date_, repair_,price_); // tworzy obiekt dynamiczny Car i przekazuje do konstruktora dane podane przez uzytkownika w metodzie Worker::add_vehicle
 	this->vehicles[firm_number_] = nowy; // dodaje ten nowy obiekt do mapy
 	
 	
@@ -34,7 +34,7 @@ void Car_list::show() // Wypisuje cala liste samochodow znajdujacych sie w mapie
 {
 	int i = 0;
 	for (auto wsk = this->vehicles.begin(); wsk != this->vehicles.end(); ++wsk) {
-		std::cout << i + 1 << "." << wsk->second->model << "\n";
+		std::cout << i + 1 << "." << wsk->second->model << "Cena za jeden dzien wypozyczenia: " <<  wsk->second->price << "\n";
 		i++;
 	}
 }

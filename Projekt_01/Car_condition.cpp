@@ -1,3 +1,4 @@
+#pragma once
 #include "Car_condition.h"
 
 Car_condition::Car_condition()
