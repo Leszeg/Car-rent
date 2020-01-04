@@ -1,13 +1,14 @@
 #pragma once
 #include <string>
 
-using namespace std;
+//using namespace std;
 
 class Car_condition
 {
-	string date;
+	std::string date;
 	bool repair;
 public:
+	friend class Car;
 	Car_condition();
 	~Car_condition();
 	void control();
