@@ -18,7 +18,7 @@ Customer* Login::customer_login(Customer_list* lista)
 	if (lista->customers.count(temp_login)==0)
 	{
 		std::cout << "Nie znaleziono takiego uzytkownika";
-		return 0;
+		return nullptr;
 	}
 	else
 	{
@@ -29,6 +29,7 @@ Customer* Login::customer_login(Customer_list* lista)
 			std::cout << "Witaj " << lista->customers[temp_login]->name;
 			return lista->customers[temp_login];
 		}
+		return nullptr;
 	}
 	
 }
@@ -42,7 +43,7 @@ Worker* Login::worker_login(Worker_list* lista_)
 	if (lista_->workers.count(temp_login) == 0)
 	{
 		std::cout << "Nie znaleziono takiego pracownika";
-		return 0;
+		return nullptr;
 	}
 	else
 	{
@@ -53,5 +54,6 @@ Worker* Login::worker_login(Worker_list* lista_)
 			std::cout << "Witaj " << lista_->workers[temp_login]->name;
 			return lista_->workers[temp_login];
 		}
+		return nullptr;
 	}
 }

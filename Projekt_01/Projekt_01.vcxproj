@@ -160,6 +160,7 @@
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Order.cpp" />
+    <ClCompile Include="Order_list.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Price.cpp" />
     <ClCompile Include="Projekt_01.cpp" />
@@ -178,6 +179,7 @@
     <ClInclude Include="Date.h" />
     <ClInclude Include="Login.h" />
     <ClInclude Include="Order.h" />
+    <ClInclude Include="Order_list.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Price.h" />
     <ClInclude Include="Registration.h" />

@@ -12,4 +12,8 @@ Rent::~Rent()
 {
 }
 
+void Rent::return_car()
+{
+	order.set_returned(true);
+}
 

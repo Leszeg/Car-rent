@@ -22,7 +22,7 @@ public:
 	void rent(Car_list*);
 	void complain();
 	void accident();
-	//void logging(); logowanie zrobilem przez klase login
+	void return_car();
 	friend class Registration;
 	friend class Customer_list;
 	friend class Login;
