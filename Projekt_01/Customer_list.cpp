@@ -13,3 +13,14 @@ void Customer_list::erase_customerr(int key)
 {
 	this->customers.erase(key);
 }
+
+void Customer_list::show()
+{
+	int i = 0;
+	for (auto wsk = this->customers.begin(); wsk != this->customers.end(); ++wsk)
+	{
+		std::cout << wsk->second->name << std::endl;
+		i++;
+	}
+}
+

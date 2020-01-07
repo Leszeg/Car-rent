@@ -55,3 +55,19 @@ void Worker::collect_car()
 {
 
 }
+
+void Worker::delete_car(Car_list* cars)
+{
+	cars->show();
+	std::cout << "Ktory pojazd chcesz usunac ?";
+	int choice3;
+
+	std::cin >> choice3;
+	auto it = cars->vehicles.begin();
+	for (int i = 1; i != choice3; i++)
+	{
+		it++;
+	}
+	
+	cars->remove_car(it->second->)
+}

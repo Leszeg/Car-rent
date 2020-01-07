@@ -24,30 +24,32 @@ void print_menu() // printer do menu, mozna pozniej zrobic jakas klase zeby nie 
 {
 	std::cout << "Witamy w wypozyczalni samochodow" << std::endl
 		//<< "1.Rejestracja nowego pracownika" << std::endl
-		<< "1.Rejestracja nowego klienta" << std::endl
-		<< "2.Zaloguj sie na konto pracownicze (login 123456 haslo andrzej)" << std::endl
-		<< "3.Zaloguj sie na konto klienta (login 321654 haslo bogdan)" << std::endl
-		<< "0.Wyjdz z programu" << std::endl;
+		<< "1. Rejestracja nowego klienta" << std::endl
+		<< "2. Zaloguj sie na konto pracownicze (login 123456 haslo andrzej)" << std::endl
+		<< "3. Zaloguj sie na konto klienta (login 321654 haslo bogdan)" << std::endl
+		<< "0. Wyjdz z programu" << std::endl;
 }
 
 void print_customer_menu()
 {
 
-	std::cout << std::endl << "1.Wypozycz Pojad" << std::endl
-		<< "2.Zwroc pojazd" << std::endl
-		<< "3.Zloz Zazalenie" << std::endl
-		<< "4.Zglosc awarie swojego pojazdu" << std::endl
-		<< "0.Wyloguj sie" << std::endl;
+	std::cout << std::endl << "1. Wypozycz Pojad" << std::endl
+		<< "2. Zwroc pojazd" << std::endl
+		<< "3. Zloz Zazalenie" << std::endl
+		<< "4. Zglosc awarie swojego pojazdu" << std::endl
+		<< "0. Wyloguj sie" << std::endl;
 }
 
 void print_worker_menu()
 {
 
-	std::cout << std::endl << "1.Pobierz oplate" << std::endl
+	std::cout << std::endl << "1. Pobierz oplate" << std::endl
 		<< "2. Rejestracja nowego pracownika" << std::endl
 		<< "3. Odierz samochod" << std::endl
 		<< "4. Dodaj nowy pojazd" << std::endl
 		<< "5. Usun samochod" << std::endl
+		<< "6. Pokaz liste pracownikow" << std::endl
+		<< "7. Pokaz liste klientow" << std::endl
 		<< "0. Wyloguj sie" << std::endl;
 }
 
@@ -91,11 +93,32 @@ int main()
 					std::cin >> choice2;
 					switch (choice2)
 					{
+
 					case 1:
+					{
+
+						break;
+					}
+					case 2:
 					{
 						Registration::register_worker(workers);
 						break;
 					}
+					case 5:
+					{
+
+					}
+					case 6:
+					{
+						workers->show();
+						break;
+					}
+					case 7:
+					{
+						customers->show();
+						break;
+					}
+
 					case 0:
 					{
 						loop = false;

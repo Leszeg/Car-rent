@@ -1,6 +1,6 @@
 #pragma once
 #include <map>
-
+#include <iostream>
 
 class Worker;
 class Worker_list;
@@ -12,6 +12,7 @@ class Worker_list
 public:
 	Worker_list();
 	~Worker_list();
+	void show();
 	void add_worker(Worker*);
 	void erase_worker(int);
 	friend class Registration;
