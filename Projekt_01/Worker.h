@@ -17,8 +17,8 @@ public:
 	//^konsruktor do testowania (dodaje na poczatku programu odrazu jakiegos pracowanika)
 	~Worker();
 	void add_vehicle(Car_list*);
-	void collect_car();
-	void delete_car();
+	
+	void delete_car(Car_list*);
 
 	friend class Registration;
 	friend class Worker_list;

@@ -4,7 +4,7 @@
 #include "Car_list.h"
 #include "Worker_list.h"
 #include "Registration.h"
-
+#include "Car.h"
 Worker::Worker(Worker_list* lista,std::string name_, std::string surname_, std::string pesel_, int age_, int worker_number_, std::string password_)
 {
 	name = name_;
@@ -51,11 +51,7 @@ void Worker::add_vehicle(Car_list* lista)
 	lista->add_car(plate_number, typ, model, firm_number, date, repair,price);
 }
 
-void Worker::collect_car(int choice_)
-{
 
-
-}
 
 void Worker::delete_car(Car_list* cars)
 {
@@ -70,5 +66,5 @@ void Worker::delete_car(Car_list* cars)
 		it++;
 	}
 	
-	cars->remove_car(it->second->)
+	cars->remove_car(it->second->firm_number);
 }

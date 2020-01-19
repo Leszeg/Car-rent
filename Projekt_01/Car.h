@@ -26,6 +26,7 @@ public:
 	std::string get_model();
 	friend void Car_list::show();
 	friend class Order;
+	friend class Worker;
 	
 	
 	

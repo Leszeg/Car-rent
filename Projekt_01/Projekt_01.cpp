@@ -10,11 +10,13 @@
 #include "Customer.h"
 #include "Login.h"
 #include "Rent.h"
+#include "Order_list.h"
 
 												 //mapy
 Car_list* cars = new Car_list;					 //samochodow
 Worker_list* workers = new Worker_list;			 //pracownikow
 Customer_list* customers = new Customer_list;	 //klientow
+Order_list* orders = new Order_list;
 int choice;										 //wybor do switcha
 
 
@@ -43,13 +45,12 @@ void print_customer_menu()
 void print_worker_menu()
 {
 
-	std::cout << std::endl << "1. Pobierz oplate" << std::endl
-		<< "2. Rejestracja nowego pracownika" << std::endl
-		<< "3. Odierz samochod" << std::endl
-		<< "4. Dodaj nowy pojazd" << std::endl
-		<< "5. Usun samochod" << std::endl
-		<< "6. Pokaz liste pracownikow" << std::endl
-		<< "7. Pokaz liste klientow" << std::endl
+	std::cout << std::endl
+		<< "1. Rejestracja nowego pracownika" << std::endl
+		<< "2. Dodaj nowy pojazd" << std::endl
+		<< "3. Usun samochod" << std::endl
+		<< "4. Pokaz liste pracownikow" << std::endl
+		<< "5. Pokaz liste klientow" << std::endl
 		<< "0. Wyloguj sie" << std::endl;
 }
 
@@ -104,16 +105,17 @@ int main()
 						Registration::register_worker(workers);
 						break;
 					}
-					case 5:
+					case 3:
 					{
-
+						wsk_worker->delete_car();
+						break;
 					}
-					case 6:
+					case 4:
 					{
 						workers->show();
 						break;
 					}
-					case 7:
+					case 5:
 					{
 						customers->show();
 						break;
@@ -151,6 +153,11 @@ int main()
 						case 1:
 						{
 							wsk_customer->rent(cars);
+							break;
+						}
+						case 2:
+						{
+							wsk_customer->return_car();
 							break;
 						}
 						case 0:
