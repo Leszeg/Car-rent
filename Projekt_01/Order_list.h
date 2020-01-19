@@ -10,8 +10,10 @@ public:
 	~Order_list();
 	void add(Order*);
 	void remove(int i);
+	void show_orders_to_collect();
 protected:
 	std::vector<Order*> orders;
 	std::vector<Order*> completed;
+	friend class Worker;
 };
 

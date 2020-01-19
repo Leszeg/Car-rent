@@ -1,5 +1,6 @@
 #pragma once
 #include "Order.h"
+#include "Order_list.h"
 
 int Order::counter = 0;
 
@@ -11,6 +12,8 @@ Order::Order(Car_list* cars,int offset)
 	cars->remove_car(chosen_car->get_firmnumber());
 	payment = Price(chosen_car->price,offset);
 	returned = false;
+
+
 }
 
 Order::~Order()

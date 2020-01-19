@@ -34,7 +34,7 @@ void Customer::rent(Car_list* cars)
 {
 	if (rented_car)
 	{
-		std::cout << "Masz juz wypozyczony samochod, jezd nim" << std::endl;
+		std::cout << "Masz juz wypozyczony samochod, jedz nim" << std::endl;
 		return;
 	}
 
@@ -50,7 +50,28 @@ void Customer::complain()
 
 void Customer::return_car()
 {
-	if (rented_car) rented_car->return_car();
+	if (rented_car == nullptr)
+	{
+		std::cout << "Nie masz wypozyczonego pojazdu" << std::endl;
+	}
+	if (rented_car)
+	{
+		
+		rented_car->return_car();
+		rented_car->get_order()->payment.set_nogas_penalty();
+		rented_car->get_order()->payment.set_repair_penalty();
+		std::cout << "Do zaplaty: " <<
+			rented_car->get_order()->payment.get_basic_fee()+
+			rented_car->get_order()->payment.get_repair_penalty()+
+			rented_car->get_order()->payment.get_nogas_penalty()
+			<< "zl" << std::endl;
+		this->rented_car = nullptr;
+	}
+}
+
+Order* Customer::get_rented_car()
+{
+	return rented_car->get_order();
 }
 
 void Customer::accident()

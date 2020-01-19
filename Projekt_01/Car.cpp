@@ -25,3 +25,8 @@ int Car::get_firmnumber()
 	return firm_number;
 }
 
+std::string Car::get_model()
+{
+	return this->model;
+}
+

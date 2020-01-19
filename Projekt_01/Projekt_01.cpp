@@ -10,11 +10,13 @@
 #include "Customer.h"
 #include "Login.h"
 #include "Rent.h"
+#include "Order_list.h"
 
 												 //mapy
 Car_list* cars = new Car_list;					 //samochodow
 Worker_list* workers = new Worker_list;			 //pracownikow
-Customer_list* customers = new Customer_list;	 //klientow
+Customer_list* customers = new Customer_list;		//klientow
+Order_list* orders = new Order_list;				//zamowienia
 int choice;										 //wybor do switcha
 
 
@@ -96,6 +98,13 @@ int main()
 						Registration::register_worker(workers);
 						break;
 					}
+
+					case 2:
+					{
+						orders->show_orders_to_collect();
+
+						break;
+					}
 					case 0:
 					{
 						loop = false;
@@ -128,6 +137,13 @@ int main()
 						case 1:
 						{
 							wsk_customer->rent(cars);
+							orders->add(wsk_customer->get_rented_car());
+
+							break;
+						}
+						case 2:
+						{
+							wsk_customer->return_car();
 							break;
 						}
 						case 0:

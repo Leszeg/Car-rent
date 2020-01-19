@@ -48,20 +48,49 @@ int Date::getYear()
 
 void Date::setDay()
 {
-	std::cout << "Podaj dzien: ";
-	std::cin >> this->day;
+	while (true)
+	{
+		std::cout << "Podaj dzien: ";
+		std::cin >> this->day;
+		if (this->day > 31 || this->day < 1)
+		{
+			std::cout << "Niepoprawny dzien" << std::endl;
+		}
+		else break;
+	}
+
+
 }
 
 void Date::setMonth()
 {
-	std::cout << "Podaj miesiac: ";
-	std::cin >> this->month;
+	while (true)
+	{
+		std::cout << "Podaj miesiac: ";
+		std::cin >> this->month;
+		if (this->month > 12 || this->month < 1)
+		{
+			std::cout << "Niepoprawny miesiac" << std::endl;
+		}
+		else break;
+	}
+
 }
 
 void Date::setYear()
 {
-	std::cout << "Podaj rok: ";
-	std::cin >> this->year;
+	
+	while (true)
+	{
+		std::cout << "Podaj rok: ";
+		std::cin >> this->year;
+		if (this->year != 2020)
+		{
+			std::cout << "Niepoprawny rok " << std::endl;
+		}
+		else break;
+	}
+	
 }
 
 void Date::show_date()
@@ -71,5 +100,5 @@ void Date::show_date()
 
 int Date::day_offset(Date actual_, Date set_)
 {
-	return (set_.getYear() - actual_.getYear()) * 365 + abs(set_.getMonth() - actual_.getYear() * 31 + abs(set_.getDay() - actual_.getDay()));
+	return set_.day - actual_.day + (set_.month - actual_.month) * 31;
 }

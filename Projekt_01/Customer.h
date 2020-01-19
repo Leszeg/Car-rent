@@ -14,6 +14,7 @@ class Customer : private Person
 	int customer_number;
 	string password;
 	Rent* rented_car;
+	
 public:
 	Customer();
 	Customer(Customer_list* lista_, std::string name_, std::string surname_, std::string pesel_, int age_,  std::string password_, int driver_license_number, int customer_number);
@@ -26,6 +27,7 @@ public:
 	friend class Registration;
 	friend class Customer_list;
 	friend class Login;
+	Order* get_rented_car();
 
 };
 

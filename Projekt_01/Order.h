@@ -7,6 +7,7 @@
 
 class Customer;
 class Rent;
+class Order_list;
 
 
 class Order
@@ -17,7 +18,7 @@ class Order
 	Car* chosen_car;
 	int order_ID;
 	static int counter;
-	int prioryty;
+	// zrobic awarie i podmianke pojazdu
 	bool returned;
 
 public:		// zamiast public mo¿na zaprzyjaŸniæ t¹ klase z Customer bo inaczej z³o¿enie zamowienia wywala ERROR
@@ -29,5 +30,6 @@ public:		// zamiast public mo¿na zaprzyjaŸniæ t¹ klase z Customer bo inaczej z³o
 	Car* select_car(Car_list*);
 	friend Customer;
 	friend class Rent;
+	friend class Order_list;
 };
 

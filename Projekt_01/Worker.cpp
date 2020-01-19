@@ -51,7 +51,8 @@ void Worker::add_vehicle(Car_list* lista)
 	lista->add_car(plate_number, typ, model, firm_number, date, repair,price);
 }
 
-void Worker::collect_car()
+void Worker::collect_car(int choice_)
 {
+
 
 }

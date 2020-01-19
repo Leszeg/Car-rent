@@ -12,7 +12,7 @@ class Order;
 class Car
 {
 	std::string plate_number;
-	std::string typ;
+	std::string typ; // zamienic na type
 	std::string model;
 	int firm_number;
 	Car_condition condition;
@@ -23,6 +23,7 @@ public:
 	Car(std::string plate_number_, std::string typ_, std::string model_, int firm_number_, std::string date_, bool repair_,int price_);
 	~Car();
 	int get_firmnumber();
+	std::string get_model();
 	friend void Car_list::show();
 	friend class Order;
 	
