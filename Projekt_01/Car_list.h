@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-//#include "Car.h" to robilo blad z "brakiem widoku klasy"
 #include <string>
 #include <map>
 
@@ -18,6 +17,10 @@ public:
 	void remove_car(int);
 	void load_from_file();
 	void show();
+	bool is_empty();
 	friend class Worker;
 	friend class Order;
+	void add_rented(Car*);
+
+
 };

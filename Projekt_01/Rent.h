@@ -1,13 +1,8 @@
 #pragma once
 #include <string>
-//#include "Order.h"
-//#include "Date.h"
 #include "Customer.h"
 
-
-//class Order;
 class Customer;
-
 
 class Rent
 {
@@ -23,6 +18,7 @@ public:
 	friend void Customer::rent(Car_list*);
 	friend class Order;
 	Order* get_order();
+
 
 };
 

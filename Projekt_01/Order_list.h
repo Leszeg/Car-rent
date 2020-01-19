@@ -1,5 +1,4 @@
 #pragma once
-
 #include <vector>
 class Order;
 
@@ -15,5 +14,6 @@ protected:
 	std::vector<Order*> orders;
 	std::vector<Order*> completed;
 	friend class Worker;
+	
 };
 

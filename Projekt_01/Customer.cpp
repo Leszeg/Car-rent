@@ -32,6 +32,11 @@ Customer::~Customer()
 
 void Customer::rent(Car_list* cars)
 {
+	if (cars->is_empty())
+	{
+		std::cout << "Brak aktualnie pojazdow do wypozyczenia" << std::endl;
+		return;
+	}
 	if (rented_car)
 	{
 		std::cout << "Masz juz wypozyczony samochod, jedz nim" << std::endl;
@@ -40,6 +45,8 @@ void Customer::rent(Car_list* cars)
 
 	Rent* temp = new Rent(cars);
 	rented_car = temp;
+	
+	std::cout << "W razie awarii prosimy o kontakt telefoniczny pod numerem: 456123789" << std::endl;
 	
 }
 
@@ -65,6 +72,7 @@ void Customer::return_car()
 			rented_car->get_order()->payment.get_repair_penalty()+
 			rented_car->get_order()->payment.get_nogas_penalty()
 			<< "zl" << std::endl;
+
 		this->rented_car = nullptr;
 	}
 }
@@ -72,6 +80,15 @@ void Customer::return_car()
 Order* Customer::get_rented_car()
 {
 	return rented_car->get_order();
+}
+
+void Customer::set_complain()
+{
+	if (rented_car)
+	{
+		rented_car->get_order()->complain.add_complainment();
+	}
+	else std::cout << "Nie masz wypozyczonego samochodu" << std::endl;
 }
 
 void Customer::accident()

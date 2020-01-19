@@ -28,6 +28,7 @@ public:
 	friend class Customer_list;
 	friend class Login;
 	Order* get_rented_car();
+	void set_complain();
 
 };
 

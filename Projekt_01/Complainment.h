@@ -6,7 +6,7 @@
 class Complainment
 {
 	std::string content;
-	Date apperance_date;
+
 public:
 	Complainment();
 	~Complainment();

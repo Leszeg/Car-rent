@@ -32,9 +32,25 @@ void Car_list::load_from_file() // czytanie z pliku, ale chyba jednak sie nie pr
 
 void Car_list::show() // Wypisuje cala liste samochodow znajdujacych sie w mapie
 {
+	if (is_empty())
+	{
+		std::cout << "Brak pojazdow" << std::endl;
+		return;
+	}
+
 	int i = 0;
 	for (auto wsk = this->vehicles.begin(); wsk != this->vehicles.end(); ++wsk) {
 		std::cout << i + 1 << "." << wsk->second->model << "Cena za jeden dzien wypozyczenia: " <<  wsk->second->price << "\n";
 		i++;
 	}
+}
+
+bool Car_list::is_empty()
+{
+	return this->vehicles.empty();
+}
+
+void Car_list::add_rented(Car* temp)
+{
+	vehicles[temp->get_firmnumber()] = temp;
 }

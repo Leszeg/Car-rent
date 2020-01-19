@@ -12,8 +12,6 @@ Order::Order(Car_list* cars,int offset)
 	cars->remove_car(chosen_car->get_firmnumber());
 	payment = Price(chosen_car->price,offset);
 	returned = false;
-
-
 }
 
 Order::~Order()
@@ -48,4 +46,9 @@ Car* Order::select_car(Car_list* cars)
 	}
 	std::cout << it->second->model;
 	return cars->vehicles[it->first];
+}
+
+Car* Order::get_car()
+{
+	return this->chosen_car;
 }

@@ -38,7 +38,6 @@ void print_customer_menu()
 	std::cout << std::endl << "1. Wypozycz Pojad" << std::endl
 		<< "2. Zwroc pojazd" << std::endl
 		<< "3. Zloz Zazalenie" << std::endl
-		<< "4. Zglosc awarie swojego pojazdu" << std::endl
 		<< "0. Wyloguj sie" << std::endl;
 }
 
@@ -51,6 +50,7 @@ void print_worker_menu()
 		<< "3. Usun samochod" << std::endl
 		<< "4. Pokaz liste pracownikow" << std::endl
 		<< "5. Pokaz liste klientow" << std::endl
+		<< "6. Pokaz liste obecnych zamowien" << std::endl
 		<< "0. Wyloguj sie" << std::endl;
 }
 
@@ -107,7 +107,7 @@ int main()
 					}
 					case 3:
 					{
-						wsk_worker->delete_car();
+						wsk_worker->delete_car(cars);
 						break;
 					}
 					case 4:
@@ -119,6 +119,10 @@ int main()
 					{
 						customers->show();
 						break;
+					}
+					case 6:
+					{
+						orders->show_orders_to_collect();
 					}
 
 					case 0:
@@ -153,11 +157,20 @@ int main()
 						case 1:
 						{
 							wsk_customer->rent(cars);
+							orders->add(wsk_customer->get_rented_car());
 							break;
 						}
 						case 2:
 						{
+							cars->add_rented(wsk_customer->get_rented_car()->get_car());
 							wsk_customer->return_car();
+							
+
+							break;
+						}
+						case 3:
+						{
+							wsk_customer->complain();
 							break;
 						}
 						case 0:
