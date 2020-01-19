@@ -12,6 +12,16 @@ Worker_list::~Worker_list()
 {
 }
 
+void Worker_list::show()
+{
+	int i = 0;
+	for (auto wsk = this->workers.begin(); wsk != this->workers.end(); ++wsk) 
+	{
+		std::cout << wsk->second->name << std::endl;
+		i++;
+	}
+}
+
 void Worker_list::add_worker(Worker* worker_)
 {
 	
